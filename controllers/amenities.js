@@ -1,8 +1,11 @@
-const Amenities = require('../models/amenities')
-const router = require('express').Router()
+const Amenities = require("../models/amenities");
+const router = require("express").Router();
 
-router.get('/', (req, res) => {
-	// Respond with all amenities
-})
+router.get("/", (req, res) => {
+  // Respond with all amenities
+  Amenities.find({}).then(response => {
+    res.send(response);
+  });
+});
 
-module.exports = router
+module.exports = router;
