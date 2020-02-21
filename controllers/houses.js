@@ -24,7 +24,7 @@ router.get("/", (req, res) => {
 
 // Create route for single house
 
-router.get("/house/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   Houses.find({ _id: req.params.id })
     .populate("amenities type host")
     .then(houses => {
