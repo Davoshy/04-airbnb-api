@@ -13,7 +13,7 @@ const database = require("./database");
 app.use(cors());
 
 // Routes
-
+app.use("/users", require("./controllers/users"));
 app.use("/houses", require("./controllers/houses"));
 app.use("/types", require("./controllers/types"));
 app.use("/amenities", require("./controllers/amenities"));

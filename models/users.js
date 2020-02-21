@@ -7,7 +7,8 @@ module.exports = mongoose.model("users", {
   },
   email: {
     type: String,
-    required: [true, "email is required"]
+    required: [true, "email is required"],
+    select: false
   },
   avatar: {
     type: String
@@ -17,6 +18,7 @@ module.exports = mongoose.model("users", {
   },
   password: {
     type: String,
-    required: [true, "password is required"]
+    required: [true, "password is required"],
+    select: false
   }
 });
