@@ -9,7 +9,7 @@
 		"populate": "node config/populate.js",
 		"populate2": "node config/populate2.js"
 	},
-	"author": "Tony Russo",
+	"author": "David Doan",
 	"license": "ISC",
 	"dependencies": {
 		"cors": "^2.8.5",
@@ -17,5 +17,9 @@
 		"express": "^4.17.1",
 		"mongoose": "^5.6.12"
 	},
-	"devDependencies": {}
+	"devDependencies": {},
+	"engines": {
+		"node": "13.12.x",
+		"npm": "6.x"
+	}
 }

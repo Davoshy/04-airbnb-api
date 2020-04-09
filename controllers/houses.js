@@ -4,7 +4,7 @@ const router = require("express").Router();
 router.get("/", (req, res) => {
   Houses.find(req.query)
     .select(
-      "images rating bedrooms guests bathroom title price city region type"
+      "images rating bedrooms guests bathroom title price city region type lat lng"
     )
     .populate("type")
     .lean()
@@ -28,7 +28,7 @@ router.get("/:id", (req, res) => {
   Houses.find({ _id: req.params.id })
     .populate("amenities type host")
     .then(houses => {
-      res.send(houses);
+      res.send(houses[0]);
     })
     .catch(err => {
       res.send(err);
